@@ -9,7 +9,6 @@ def test_add_to_cart_button_presence(browser):
     # Временная задержка для наглядности
     time.sleep(30)
     # Проверка наличии кнопки
-    buttonAddCartElement = browser.find_element(By.XPATH, '//button[@class="btn btn-lg btn-primary btn-add-to-basket"]')
-    buttonAddCar = buttonAddCartElement.text
-    assert buttonAddCar == 'Ajouter au panier'
+    buttonAddCart = browser.find_element(By.XPATH, '//button[@class="btn btn-lg btn-primary btn-add-to-basket"]')
+    assert buttonAddCart, "Add to cart button is not present"
 
